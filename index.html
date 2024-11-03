@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotos del Rover en Marte</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Fotos del Rover en Marte</h1>
+    <div class="busqueda">
+      <label for="fechaTierra">Fecha en la Tierra:</label>
+      <input type="date" id="fechaTierra" value="2015-07-02">
+      <button class="btn" onclick="buscarFotos()">Buscar</button>
+    </div>
+
+    <div class="contenido">
+      <div class="seccionTabla">
+        <div class="tablaScrolleable">
+          <table id="tablaFotos">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre del Rover</th>
+                <th>Cámara</th>
+                <th>Detalles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Aqui se genera el contenido dinamico -->
+            </tbody>
+          </table>
+        </div>
+        <div class="paginacion">
+          <button onclick="paginaAnterior()">Anterior</button>
+          <button onclick="paginaSiguiente()">Siguiente</button>
+        </div>
+      </div>
+
+      <div class="detalleFoto">
+        <h2>Detalles de la Foto</h2>
+        <img id="imagenFoto" src="" alt="Foto de Marte">
+        <p><strong>Id:</strong> <span id="idFoto"></span> <strong>Sol Marciano:</strong> <span id="solFoto"></span> <strong>Fecha en la Tierra:</strong> <span id="fechaFoto"></span></p>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
